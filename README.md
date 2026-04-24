@@ -27,7 +27,7 @@ The analysis explores key areas such as **ROI, revenue, budgets, ratings, genres
 - Enabled efficient reporting through structured data models  
 
 ---
-
+ 
 ### ✔️ SQL Data Analysis  
 
 #### 🔹 Top ROI Films
@@ -37,5 +37,37 @@ FROM tmdb_5000_movies
 WHERE budget > 1000000
 ORDER BY roi DESC
 LIMIT 10;
+```
 
+#### 🔹 Average Rating by Genre
+```sql
+SELECT genres,
+ROUND(AVG(vote_average),2) AS avg_rating
+FROM tmdb_5000_movies
+WHERE vote_count >= 50
+GROUP BY genres
+ORDER BY avg_rating DESC;
+```
+#### 🔹 Average Rating by Decade
+```sql
+SELECT FLOOR(YEAR(release_date)/10)*10 AS decade,
+ROUND(AVG(budget/1000000),1) AS avg_budget
+FROM tmdb_5000_movies
+WHERE budget > 1000000
+GROUP BY decade;
+```
+
+#### 🔹 Most Profitable Studios
+```sql
+SELECT production_companies,
+ROUND(SUM(revenue-budget)/1000000000,2) AS profit_bn
+FROM tmdb_5000_movies
+WHERE budget > 1000000
+GROUP BY production_companies
+ORDER BY profit_bn DESC
+LIMIT 10;
+```
+
+
+### Final Dashbaord
 <img width="1951" height="1071" alt="Screenshot 2026-03-24 045351" src="https://github.com/user-attachments/assets/e76cdb4f-a94c-4d56-ba01-b261f1ce19b5" />
