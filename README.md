@@ -39,22 +39,6 @@ The report contains year and genre filters, headline KPI cards, ranked bar chart
 | Analytical judgement | Minimum budget and vote-count thresholds to reduce misleading outliers |
 | Communication | Business questions, documented assumptions, findings and recommendations |
 
-## Data preparation and quality controls
-
-The raw dataset contains zero values, missing dates and nested text fields. These can produce misleading results if they are treated as valid observations. The analysis therefore:
-
-1. checks row counts, nulls, duplicate IDs and invalid values;
-2. excludes zero or missing budgets from ROI calculations;
-3. uses a **$1 million minimum budget** for ROI and profitability comparisons;
-4. uses a **minimum of 50 votes** for genre-rating comparisons;
-5. calculates profit as `revenue - budget` and ROI as `revenue / budget`;
-6. derives decade from `release_date`; and
-7. treats the dashboard as a descriptive view of the dataset—not a forecast of future success.
-
-The reusable SQL is available in:
-
-- [`sql/01_data_quality_checks.sql`](sql/01_data_quality_checks.sql)
-- [`sql/02_analysis_queries.sql`](sql/02_analysis_queries.sql)
 
 ## Example SQL
 
