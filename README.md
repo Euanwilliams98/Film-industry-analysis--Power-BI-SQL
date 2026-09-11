@@ -4,6 +4,8 @@
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=black)
 ![Status](https://img.shields.io/badge/status-complete-2E8B57)
 
+> A recruiter-ready BI case study covering data quality, commercial performance, analytical judgement and decision-focused recommendations.
+
 ## Project summary
 
 This portfolio project analyses film-industry performance using the **TMDB 5000 Movies dataset**. I used SQL and Power Query to validate and prepare the data, then built an interactive Power BI dashboard to compare commercial performance, audience ratings, genres, decades and production companies.
@@ -149,6 +151,5 @@ Western and Documentary are the highest-rated genres shown, both averaging just 
 
 ## Author
 
-**Euan Williams** — early-career Business Intelligence and Data Analyst
-
-[GitHub profile](https://github.com/Euanwilliams98)
+**Euan Williams** — Junior Business Intelligence & Data Analyst  
+[View my full portfolio](https://github.com/Euanwilliams98) · [Connect on LinkedIn](https://www.linkedin.com/in/euan-williams-081755232/)
