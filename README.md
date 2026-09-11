@@ -129,13 +129,6 @@ Western and Documentary are the highest-rated genres shown, both averaging just 
 - A film can belong to multiple genres or production companies; totals depend on the transformation and attribution method used.
 - Correlation in this descriptive analysis does not establish that a genre, budget or studio caused an outcome.
 
-## What I would develop next
-
-- Add inflation-adjusted budget and revenue measures.
-- Create a normalised bridge table for films with multiple genres and production companies.
-- Add profit margin, median ROI, film count and confidence/sample-size context to tooltips.
-- Build a drill-through page for film-level detail and a studio comparison page.
-- Test relationships statistically and create a simple, validated revenue model.
 
 ## Repository structure
 
