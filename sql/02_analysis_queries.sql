@@ -80,7 +80,7 @@ SELECT
     ROUND(AVG(m.vote_average), 2) AS average_rating
 FROM tmdb_5000_movies AS m
 JOIN JSON_TABLE(
-    m.genres,
+    CASE WHEN JSON_VALID(m.genres) THEN m.genres ELSE JSON_ARRAY() END,
     '$[*]' COLUMNS (
         genre VARCHAR(100) PATH '$.name'
     )
@@ -108,7 +108,7 @@ SELECT
     ) AS portfolio_roi_multiplier
 FROM tmdb_5000_movies AS m
 JOIN JSON_TABLE(
-    m.production_companies,
+    CASE WHEN JSON_VALID(m.production_companies) THEN m.production_companies ELSE JSON_ARRAY() END,
     '$[*]' COLUMNS (
         production_company VARCHAR(200) PATH '$.name'
     )
